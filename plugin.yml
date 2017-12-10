@@ -1,5 +1,5 @@
 name: EnchanterUI
-main: BPEDevs\Enchanter\Main;
+main: BPEDevs\Enchanter\Main
 version: 1.0.0
 api: [3.0.0-ALPHA9, 3.0.0-ALPHA10]
 author: BPEDevs
