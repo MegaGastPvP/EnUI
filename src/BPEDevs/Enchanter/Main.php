@@ -78,10 +78,51 @@ class Main extends PluginBase implements Listener{
                     switch($r){
                         case 0:
                             break;
+                        case 1:
+                            $command = "antitoxin";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
                         case 2:
-                            
+                            $command = "forcefield";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
+                        case 3:
+                            $command = "forcefield";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
+                        case 4:
+                            $command = "hallucination";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
+                        case 5:
+                            $command = "overload";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
+                        case 6:
+                            $command = "jackpot";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
+                        case 7:
+                            $command = "porkified";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
+                        case 8:
+                            $command = "soulbound";
+                            $this->getServer()->getCommandMap()->dispatch($p, $command);
+                            break;
                     }
                     });
+                $ff->setTitle(c::RED . c::BOLD . "Mythic Enchantments");
+                $ff->setContent(c::AQUA . "Which Mythic Enchant Do You What");
+                $ff->addButton(c::BOLD . "Enchantments");
+                $ff->addButton(c::RED . "Antitoxin");
+                $ff->addButton(c::RED . "forcefield");
+                $ff->addButton(c::RED . "Hallucination");
+                $ff->addButton(c::RED . "Overload");
+                $ff->addButton(c::RED . "Jackpot");
+                $ff->addButton(c::RED . "porkified");
+                $ff->addButton(c::RED . "SoulBound");
+                $ff->sendToPlayer($p);
                     
                 
         }
