@@ -64,10 +64,7 @@ class Main extends PluginBase implements Listener{
                 $f->addButton(c::YELLOW . "Rare");
                 $f->addButton(c::AQUA  . "Uncommon");
                 $f->addButton(c::GREEN . "Common");
-                $f->sendToPlayer($p);
-                if(!$p instanceof Player){
-                    
-                }
+                $f->sendToPlayer($p);               
                 case "mythic":
                     $apii = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
                     $ff = $apii->createSimpleForm(function (Player $p, array $data){
