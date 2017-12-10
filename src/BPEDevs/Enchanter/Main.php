@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener{
                     case 0:
                         break;
                     case 1:
-                        $command = "Mythic";
+                        $command = "mythic";
                         $this->getServer()->getCommandMap()->dispatch($p, $command);
                         break;
                     case 2:
