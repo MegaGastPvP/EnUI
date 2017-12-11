@@ -25,9 +25,9 @@ class Main extends PluginBase implements Listener{
     }
     public function onCommand(CommandSender $p, Command $cmd, string $label, array $args) : bool {
         $playermoney = EconomyAPI::getInstance()->myMoney($p);
-        switch($cmd->getName()){
-                if($p instanceof Player){
+        switch($cmd->getName()){               
             case "enchanter":
+                if($p instanceof Player){
                 $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
                 if($api === null || $api->isDisabled()){
                     
