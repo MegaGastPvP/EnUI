@@ -26,6 +26,7 @@ class Main extends PluginBase implements Listener{
     public function onCommand(CommandSender $p, Command $cmd, string $label, array $args) : bool {
         $playermoney = EconomyAPI::getInstance()->myMoney($p);
         switch($cmd->getName()){
+                if($p instanceof Player){
             case "enchanter":
                 $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
                 if($api === null || $api->isDisabled()){
@@ -64,8 +65,10 @@ class Main extends PluginBase implements Listener{
                 $f->addButton(c::YELLOW . "Rare");
                 $f->addButton(c::AQUA  . "Uncommon");
                 $f->addButton(c::GREEN . "Common");
-                $f->sendToPlayer($p);               
+                $f->sendToPlayer($p);  
+                }
                 case "mythic":
+                if($p instanceof Player){
                     $apii = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
                     $ff = $apii->createSimpleForm(function (Player $p, array $data){
                     $r = $data[1];
@@ -120,7 +123,7 @@ class Main extends PluginBase implements Listener{
                 $ff->addButton(c::RED . "porkified");
                 $ff->addButton(c::RED . "SoulBound");
                 $ff->sendToPlayer($p);
-                    
+                }     
                 
         }
     }
