@@ -27,7 +27,6 @@ class Main extends PluginBase implements Listener{
         $playermoney = EconomyAPI::getInstance()->myMoney($p);
         switch($cmd->getName()){               
             case "enchanter":
-                if($p instanceof Player){
                 $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
                 if($api === null || $api->isDisabled()){
                     
@@ -66,9 +65,7 @@ class Main extends PluginBase implements Listener{
                 $f->addButton(c::AQUA  . "Uncommon");
                 $f->addButton(c::GREEN . "Common");
                 $f->sendToPlayer($p);  
-                }
                 case "mythic":
-                if($p instanceof Player){
                     $apii = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
                     $ff = $apii->createSimpleForm(function (Player $p, array $data){
                     $r = $data[1];
@@ -122,8 +119,7 @@ class Main extends PluginBase implements Listener{
                 $ff->addButton(c::RED . "Jackpot");
                 $ff->addButton(c::RED . "porkified");
                 $ff->addButton(c::RED . "SoulBound");
-                $ff->sendToPlayer($p);
-                }     
+                $ff->sendToPlayer($p); 
                 
         }
     }
